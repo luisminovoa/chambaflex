@@ -1,0 +1,39 @@
+// /mock/jobs.js
+const defaultJobs = [
+  {
+    id: 1,
+    title: 'Ayudante de Mudanza',
+    description: 'Necesito ayuda para cargar y descargar muebles de un departamento a otro. Se requiere fuerza física.',
+    date: '2024-07-20',
+    time: '09:00',
+    payment: '$800 MXN por día',
+    location: 'Colonia Roma, CDMX',
+  },
+  {
+    id: 2,
+    title: 'Limpieza de Oficina',
+    description: 'Limpieza general de una oficina pequeña. Incluye aspirar, trapear, limpiar baños y escritorios.',
+    date: '2024-07-22',
+    time: '14:00',
+    payment: '$400 MXN por 4 horas',
+    location: 'Polanco, CDMX',
+  },
+  {
+    id: 3,
+    title: 'Cocinero para Evento',
+    description: 'Preparar platillos sencillos para una reunión familiar de 15 personas. Menú ya definido.',
+    date: '2024-07-25',
+    time: '18:00',
+    payment: '$1200 MXN por evento',
+    location: 'Condesa, CDMX',
+  },
+  {
+    id: 4,
+    title: 'Paseador de Perros',
+    description: 'Pasear dos perros grandes por 1 hora. Deben ser amigables con animales.',
+    date: '2024-07-21',
+    time: '10:00',
+    payment: '$200 MXN por paseo',
+    location: 'Narvarte, CDMX',
+  },
+];
