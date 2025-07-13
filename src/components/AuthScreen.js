@@ -39,7 +39,7 @@ const AuthScreen = ({ onLogin }) => {
                 required
               />
             </div>
-            <div className="flex items-center justify-between">
+            <div className="flex items-center justify-between mb-4">
               <button
                 type="submit"
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
@@ -48,6 +48,15 @@ const AuthScreen = ({ onLogin }) => {
               </button>
             </div>
           </form>
+          <div className="text-center">
+            <p className="text-gray-600 mb-4">o</p>
+            <button
+              onClick={() => onLogin("worker@google.com")}
+              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+            >
+              Iniciar Sesión con Google
+            </button>
+          </div>
         </div>
       );
     };
