@@ -1,5 +1,4 @@
-// /mock/jobs.js
-const defaultJobs = [
+export const defaultJobs = [
   {
     id: 1,
     title: 'Ayudante de Mudanza',
@@ -8,6 +7,7 @@ const defaultJobs = [
     time: '09:00',
     payment: '$800 MXN por día',
     location: 'Colonia Roma, CDMX',
+    employerId: 'user_empleador_1',
   },
   {
     id: 2,
@@ -17,6 +17,7 @@ const defaultJobs = [
     time: '14:00',
     payment: '$400 MXN por 4 horas',
     location: 'Polanco, CDMX',
+    employerId: 'user_empleador_1',
   },
   {
     id: 3,
@@ -26,6 +27,7 @@ const defaultJobs = [
     time: '18:00',
     payment: '$1200 MXN por evento',
     location: 'Condesa, CDMX',
+    employerId: 'user_empleador_2',
   },
   {
     id: 4,
@@ -35,5 +37,16 @@ const defaultJobs = [
     time: '10:00',
     payment: '$200 MXN por paseo',
     location: 'Narvarte, CDMX',
+    employerId: 'user_empleador_2',
+  },
+  {
+    id: 5,
+    title: 'Jardinería básica',
+    description: 'Cortar el césped y podar arbustos en un jardín pequeño.',
+    date: '2024-07-15',
+    time: '10:00',
+    payment: '$300 MXN por trabajo',
+    location: 'Coyoacán, CDMX',
+    employerId: 'user_empleador_1',
   },
 ];

@@ -1,9 +1,12 @@
-// /components/WorkerJobList.js
-function WorkerJobList({ jobs, onApply }) {
+import React, { useState } from 'react';
+import JobCard from '../components/JobCard';
+import { defaultJobs } from '../mocks/jobs';
+
+const WorkerJobList = ({ onApply }) => {
   const [filterPuesto, setFilterPuesto] = useState('');
   const [filterUbicacion, setFilterUbicacion] = useState('');
 
-  const filteredJobs = jobs.filter(job => {
+  const filteredJobs = defaultJobs.filter(job => {
     const matchesPuesto = filterPuesto ? job.title.toLowerCase().includes(filterPuesto.toLowerCase()) : true;
     const matchesUbicacion = filterUbicacion ? job.location.toLowerCase().includes(filterUbicacion.toLowerCase()) : true;
     return matchesPuesto && matchesUbicacion;
@@ -12,7 +15,6 @@ function WorkerJobList({ jobs, onApply }) {
   return (
     <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
       <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Chambas Disponibles</h2>
-
       <div className="bg-white p-5 rounded-2xl shadow-lg border border-gray-200 mb-6 max-w-2xl mx-auto">
         <h3 className="text-xl font-semibold text-gray-900 mb-4">Filtros</h3>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -44,7 +46,6 @@ function WorkerJobList({ jobs, onApply }) {
           </div>
         </div>
       </div>
-
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
         {filteredJobs.length > 0 ? (
           filteredJobs.map(job => (
@@ -56,4 +57,6 @@ function WorkerJobList({ jobs, onApply }) {
       </div>
     </div>
   );
-}
+};
+
+export default WorkerJobList;

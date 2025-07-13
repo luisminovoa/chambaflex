@@ -1,5 +1,6 @@
-// /components/JobCard.js
-function JobCard({ job, onApply, showApplyButton = true }) {
+import React from 'react';
+
+const JobCard = ({ job, onApply, showApplyButton = true }) => {
   return (
     <div className="bg-white p-5 rounded-2xl shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
       <h3 className="text-xl font-semibold text-gray-900 mb-2">{job.title}</h3>
@@ -30,4 +31,6 @@ function JobCard({ job, onApply, showApplyButton = true }) {
       )}
     </div>
   );
-}
+};
+
+export default JobCard;

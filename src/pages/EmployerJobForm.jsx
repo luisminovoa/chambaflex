@@ -1,5 +1,7 @@
-// /components/EmployerJobForm.js
-function EmployerJobForm({ onJobPosted }) {
+import React, { useState } from 'react';
+import toast from 'react-hot-toast';
+
+const EmployerJobForm = ({ onJobPosted }) => {
   const [title, setTitle] = useState('');
   const [description, setDescription] = useState('');
   const [date, setDate] = useState('');
@@ -9,11 +11,12 @@ function EmployerJobForm({ onJobPosted }) {
 
   const handleSubmit = () => {
     if (!title || !description || !date || !time || !payment || !location) {
-      alert('Por favor, completa todos los campos.');
+      toast.error('Por favor, completa todos los campos.');
       return;
     }
     const newJob = { title, description, date, time, payment, location, id: Date.now() };
-    onJobPosted(newJob);
+    // onJobPosted(newJob); // Esta función se pasará como prop desde App.jsx
+    toast.success('¡Chamba publicada con éxito!');
     setTitle('');
     setDescription('');
     setDate('');
@@ -26,7 +29,6 @@ function EmployerJobForm({ onJobPosted }) {
     <div className="p-4 sm:p-6 bg-gray-100 min-h-screen">
       <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-xl border border-gray-200 max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">Publicar Nueva Chamba</h2>
-
         <div className="mb-4">
           <label htmlFor="title" className="block text-sm font-medium text-gray-700 mb-2">
             Título del Trabajo
@@ -40,7 +42,6 @@ function EmployerJobForm({ onJobPosted }) {
             onChange={(e) => setTitle(e.target.value)}
           />
         </div>
-
         <div className="mb-4">
           <label htmlFor="description" className="block text-sm font-medium text-gray-700 mb-2">
             Descripción
@@ -54,7 +55,6 @@ function EmployerJobForm({ onJobPosted }) {
             onChange={(e) => setDescription(e.target.value)}
           ></textarea>
         </div>
-
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
           <div>
             <label htmlFor="date" className="block text-sm font-medium text-gray-700 mb-2">
@@ -81,7 +81,6 @@ function EmployerJobForm({ onJobPosted }) {
             />
           </div>
         </div>
-
         <div className="mb-4">
           <label htmlFor="payment" className="block text-sm font-medium text-gray-700 mb-2">
             Pago Ofrecido
@@ -95,7 +94,6 @@ function EmployerJobForm({ onJobPosted }) {
             onChange={(e) => setPayment(e.target.value)}
           />
         </div>
-
         <div className="mb-6">
           <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
             Ubicación
@@ -109,7 +107,6 @@ function EmployerJobForm({ onJobPosted }) {
             onChange={(e) => setLocation(e.target.value)}
           />
         </div>
-
         <button
           onClick={handleSubmit}
           className="w-full bg-black text-white py-3 rounded-xl hover:bg-gray-800 transition-colors text-lg font-semibold shadow-md"
@@ -119,4 +116,6 @@ function EmployerJobForm({ onJobPosted }) {
       </div>
     </div>
   );
-}
+};
+
+export default EmployerJobForm;
