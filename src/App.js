@@ -1,16 +1,16 @@
 const App = () => {
       const [user, setUser] = useState(null);
-      const [view, setView] = useState("auth"); // "auth", "worker-dashboard", "employer-dashboard", "profile"
+      const [view, setView] = useState("auth"); // "auth", "role-selection", "worker-dashboard", "employer-dashboard", "profile"
 
       const handleLogin = (email) => {
-        // Mock login
-        if (email.includes("worker")) {
-          setUser({ email, type: "worker" });
-          setView("worker-dashboard");
-        } else {
-          setUser({ email, type: "employer" });
-          setView("employer-dashboard");
-        }
+        // Mock login, just set a dummy user and move to role selection
+        setUser({ email });
+        setView("role-selection");
+      };
+
+      const handleRoleSelection = (role) => {
+        setUser((prevUser) => ({ ...prevUser, type: role }));
+        setView(role === "worker" ? "worker-dashboard" : "employer-dashboard");
       };
 
       const handleLogout = () => {
@@ -22,6 +22,8 @@ const App = () => {
         switch (view) {
           case "auth":
             return <AuthScreen onLogin={handleLogin} />;
+          case "role-selection":
+            return <RoleSelectionScreen onSelectRole={handleRoleSelection} />;
           case "worker-dashboard":
             return <WorkerJobList />;
           case "employer-dashboard":
