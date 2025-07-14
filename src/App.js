@@ -1,15 +1,15 @@
 const App = () => {
       const [user, setUser] = useState(null);
-      const [view, setView] = useState("auth"); // "auth", "worker", "employer", "profile"
+      const [view, setView] = useState("auth"); // "auth", "worker-dashboard", "employer-dashboard", "profile"
 
       const handleLogin = (email) => {
         // Mock login
         if (email.includes("worker")) {
           setUser({ email, type: "worker" });
-          setView("worker");
+          setView("worker-dashboard");
         } else {
           setUser({ email, type: "employer" });
-          setView("employer");
+          setView("employer-dashboard");
         }
       };
 
@@ -22,12 +22,12 @@ const App = () => {
         switch (view) {
           case "auth":
             return <AuthScreen onLogin={handleLogin} />;
-          case "worker":
+          case "worker-dashboard":
             return <WorkerJobList />;
-          case "employer":
-            return <EmployerJobForm />;
+          case "employer-dashboard":
+            return <EmployerDashboard />;
           case "profile":
-            return <ProfileSetupScreen />;
+            return <ProfileSetupScreen userType={user.type} />;
           case "my-applications":
             return <MyApplicationsScreen />;
           case "my-jobs":

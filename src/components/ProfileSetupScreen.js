@@ -1,4 +1,4 @@
-const ProfileSetupScreen = () => {
+const ProfileSetupScreen = ({ userType }) => {
       const [name, setName] = useState("John Doe");
       const [bio, setBio] = useState("Desarrollador Full-Stack con 5 años de experiencia.");
       const [skills, setSkills] = useState("React, Node.js, Python");
@@ -57,6 +57,7 @@ const ProfileSetupScreen = () => {
               </button>
             </div>
           </form>
+          {userType === 'worker' && <ApplicantHistoryScreen />}
           <Reviews />
         </div>
       );

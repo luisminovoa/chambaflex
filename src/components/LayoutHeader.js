@@ -8,18 +8,22 @@ const LayoutHeader = ({ user, onLogout, setView }) => {
                 <button onClick={() => setView("profile")} className="mr-4">
                   Perfil
                 </button>
-                {user.type === "worker" && (
-                  <button onClick={() => setView("my-applications")} className="mr-4">
-                    Mis Postulaciones
-                  </button>
-                )}
-                {user.type === "employer" && (
+                {user.type === "worker" ? (
                   <>
+                    <button onClick={() => setView("worker-dashboard")} className="mr-4">
+                      Buscar Trabajos
+                    </button>
+                    <button onClick={() => setView("my-applications")} className="mr-4">
+                      Mis Postulaciones
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <button onClick={() => setView("employer-dashboard")} className="mr-4">
+                      Dashboard
+                    </button>
                     <button onClick={() => setView("my-jobs")} className="mr-4">
                       Mis Trabajos
-                    </button>
-                    <button onClick={() => setView("employer")} className="mr-4">
-                      Publicar Trabajo
                     </button>
                   </>
                 )}
