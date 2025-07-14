@@ -14,7 +14,7 @@ const RoleSelectionScreen = ({ onSelectRole }) => {
               onClick={() => onSelectRole("worker")}
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer"
             >
-              <h3 className="text-2xl font-bold text-secondary-dark mb-2">Soy Trabajador</h3>
+              <h3 className="text-2xl font-bold text-primary mb-2">Soy Trabajador</h3>
               <p className="text-gray-600">Busco oportunidades para aplicar mis habilidades.</p>
             </div>
           </div>

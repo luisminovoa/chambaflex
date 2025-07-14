@@ -121,7 +121,7 @@ const FindWorkersScreen = () => {
     const WorkerCard = ({ worker }) => {
         const getAvailabilityClass = (availability) => {
             if (availability === 'Inmediata') return 'bg-secondary text-primary';
-            return 'bg-gray-200 text-gray-800';
+            return 'bg-light text-gray-800';
         };
 
         const renderStars = (rating) => {
@@ -171,7 +171,7 @@ const FindWorkersScreen = () => {
                     <button className="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg">
                         Ver Perfil
                     </button>
-                    <button className="w-full bg-gray-200 hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg">
+                    <button className="w-full bg-light hover:bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg">
                         Contactar
                     </button>
                 </div>

@@ -1,6 +1,6 @@
 const LayoutHeader = ({ user, onLogout, setView }) => {
       return (
-        <header className="bg-primary text-white p-4 flex justify-between items-center shadow-md">
+        <header className="bg-primary text-white p-4 flex justify-between items-center shadow-lg">
           <h1 className="text-2xl font-bold">Chamba Flex</h1>
           <nav>
             <button onClick={() => setView("mission")} className="mr-6 font-semibold hover:text-secondary">
