@@ -28,6 +28,10 @@ const App = () => {
             return <EmployerJobForm />;
           case "profile":
             return <ProfileSetupScreen />;
+          case "my-applications":
+            return <MyApplicationsScreen />;
+          case "my-jobs":
+            return <MyJobsScreen />;
           default:
             return <AuthScreen onLogin={handleLogin} />;
         }

@@ -57,6 +57,7 @@ const ProfileSetupScreen = () => {
               </button>
             </div>
           </form>
+          <Reviews />
         </div>
       );
     };
