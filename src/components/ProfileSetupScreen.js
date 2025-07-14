@@ -15,6 +15,7 @@ const ProfileSetupScreen = ({ userType }) => {
 
       return (
         <div className="max-w-2xl mx-auto mt-10">
+          {userType === 'worker' && <WorkerStats />}
           <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md">
             <h2 className="text-2xl font-bold mb-6">
               {isEmployer ? "Perfil de la Empresa" : "Configuración del Perfil"}

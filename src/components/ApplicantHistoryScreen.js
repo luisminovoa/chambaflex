@@ -8,7 +8,7 @@ const ApplicantHistoryScreen = () => {
 
       return (
         <div>
-          <h2 className="text-2xl font-bold mb-4">Historial de Aplicantes</h2>
+          <h2 className="text-2xl font-bold mb-4">Historial de Trabajos</h2>
           <div className="bg-white p-4 rounded-lg shadow-md">
             <ul>
               {history.map((applicant) => (

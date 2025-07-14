@@ -17,7 +17,7 @@ const Reviews = ({ userType }) => {
       return (
         <div className="mt-10">
           <h2 className="text-2xl font-bold mb-4">
-            {isEmployer ? "Reseñas de la Empresa" : "Mis Reseñas"}
+            {isEmployer ? "Reseñas de la Empresa" : "Reseñas que he recibido"}
           </h2>
           <div className="space-y-4">
             {reviewsData.map((review) => (
