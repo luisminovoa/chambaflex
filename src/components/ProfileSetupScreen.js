@@ -68,7 +68,7 @@ const ProfileSetupScreen = ({ userType }) => {
             </div>
           </form>
           {userType === 'worker' ? <ApplicantHistoryScreen /> : <MyJobsScreen />}
-          <Reviews userType={userType} />
+          {userType === 'employer' && <Reviews userType={userType} />}
         </div>
       );
     };

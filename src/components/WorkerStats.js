@@ -1,9 +1,12 @@
 const WorkerStats = () => {
-      const rating = 4.8;
-      const memberSince = "Enero 2023";
-      const successfulJobs = 15;
-      const trustLevel = successfulJobs > 10 ? "Trabajador Confiable" : "Nuevo Talento";
-      const trustLevelClass = successfulJobs > 10 ? "bg-green-500 text-white" : "bg-blue-500 text-white";
+      const completedJobs = jobHistory.filter(job => job.status === "Completado" && job.rating);
+      const successfulJobs = completedJobs.length;
+      const totalRating = completedJobs.reduce((acc, job) => acc + job.rating, 0);
+      const averageRating = successfulJobs > 0 ? totalRating / successfulJobs : 0;
+
+      const memberSince = "Enero 2023"; // Still static for simulation
+      const trustLevel = successfulJobs >= 3 ? "Trabajador Confiable" : "Nuevo Talento";
+      const trustLevelClass = successfulJobs >= 3 ? "bg-green-500 text-white" : "bg-blue-500 text-white";
 
       const renderStars = (rating) => {
         const stars = [];
@@ -24,21 +27,21 @@ const WorkerStats = () => {
       return (
         <div className="bg-white p-6 rounded-lg shadow-md mb-6 text-center">
           <h3 className="text-xl font-bold mb-4">Mis Estadísticas</h3>
-          <div className="flex justify-around items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
               <p className="text-lg font-semibold">Puntuación General</p>
               <div className="flex justify-center items-center">
-                {renderStars(rating)}
-                <span className="ml-2 text-xl font-bold">{rating.toFixed(1)}</span>
+                {renderStars(averageRating)}
+                <span className="ml-2 text-xl font-bold">{averageRating.toFixed(1)}</span>
               </div>
             </div>
             <div>
-              <p className="text-lg font-semibold">Miembro Desde</p>
-              <p className="text-xl font-bold">{memberSince}</p>
+              <p className="text-lg font-semibold">Trabajos Completados</p>
+              <p className="text-2xl font-bold">{successfulJobs}</p>
             </div>
             <div>
-              <p className="text-lg font-semibold">Confianza</p>
-              <p className={`text-lg font-bold px-3 py-1 rounded-full ${trustLevelClass}`}>{trustLevel}</p>
+              <p className="text-lg font-semibold">Nivel de Confianza</p>
+              <p className={`text-lg font-bold px-3 py-1 rounded-full inline-block ${trustLevelClass}`}>{trustLevel}</p>
             </div>
           </div>
         </div>
