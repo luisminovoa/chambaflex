@@ -8,10 +8,20 @@ const AuthScreen = ({ onLogin }) => {
       };
 
       return (
-        <div className="max-w-md mx-auto mt-10">
-          <form onSubmit={handleLogin} className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6">Iniciar Sesión</h2>
-            <div className="mb-4">
+        <div className="max-w-4xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="text-left p-4">
+            <h1 className="text-5xl font-bold text-blue-600 mb-4">Chamba Flex</h1>
+            <p className="text-lg text-gray-700">
+              Es la app que conecta empleadores con trabajadores calificados por día u hora, en tiempo real.
+            </p>
+            <p className="text-lg text-gray-700 mt-4">
+              A diferencia de otras plataformas, aquí puedes contratar sin publicar, viendo directamente quién está disponible según tu barrio y necesidad.
+            </p>
+          </div>
+          <div>
+            <form onSubmit={handleLogin} className="bg-white p-8 rounded-lg shadow-xl">
+              <h2 className="text-2xl font-bold mb-6 text-center">Iniciar Sesión</h2>
+              <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="email">
                 Correo Electrónico
               </label>
@@ -47,15 +57,16 @@ const AuthScreen = ({ onLogin }) => {
                 Iniciar Sesión
               </button>
             </div>
-          </form>
-          <div className="text-center">
-            <p className="text-gray-600 mb-4">o</p>
-            <button
-              onClick={() => onLogin("worker@google.com")}
-              className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
-            >
-              Iniciar Sesión con Google
-            </button>
+            <div className="text-center">
+              <p className="text-gray-600 my-4">o</p>
+              <button
+                onClick={() => onLogin("worker@google.com")}
+                className="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline w-full"
+              >
+                Iniciar Sesión con Google
+              </button>
+            </div>
+            </form>
           </div>
         </div>
       );
