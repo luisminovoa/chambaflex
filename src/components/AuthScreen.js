@@ -10,9 +10,11 @@ const AuthScreen = ({ onLogin }) => {
       return (
         <div className="max-w-4xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
           <div className="text-left p-4">
-            <h1 className="text-5xl font-bold text-blue-600 mb-4">Chamba Flex</h1>
+            <h1 className="text-4xl font-bold text-gray-800 mb-4 leading-tight">
+              La app que transforma el <span className="text-blue-600">trabajo informal</span> en <span className="text-green-500">oportunidad digital</span>
+            </h1>
             <p className="text-lg text-gray-700">
-              Es la app que conecta empleadores con trabajadores calificados por día u hora, en tiempo real.
+              Conecta con empleadores y trabajadores calificados por día u hora, en tiempo real.
             </p>
             <p className="text-lg text-gray-700 mt-4">
               A diferencia de otras plataformas, aquí puedes contratar sin publicar, viendo directamente quién está disponible según tu barrio y necesidad.

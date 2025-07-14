@@ -1,8 +1,11 @@
 const LayoutHeader = ({ user, onLogout, setView }) => {
       return (
         <header className="bg-blue-600 text-white p-4 flex justify-between items-center">
-          <h1 className="text-2xl font-bold">ChambaExpress</h1>
+          <h1 className="text-2xl font-bold">Chamba Flex</h1>
           <nav>
+            <button onClick={() => setView("mission")} className="mr-6 text-white hover:text-gray-200">
+                Nuestra Misión
+            </button>
             {user ? (
               <>
                 <button onClick={() => setView("profile")} className="mr-4">
@@ -30,7 +33,12 @@ const LayoutHeader = ({ user, onLogout, setView }) => {
                 <button onClick={onLogout}>Cerrar Sesión</button>
               </>
             ) : (
-              <button onClick={() => setView("auth")}>Iniciar Sesión</button>
+              <button
+                onClick={() => setView("auth")}
+                className="bg-white text-blue-600 font-bold py-2 px-4 rounded hover:bg-gray-200"
+              >
+                Iniciar Sesión
+              </button>
             )}
           </nav>
         </header>

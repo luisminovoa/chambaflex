@@ -1,10 +1,14 @@
-const EmployerApplicantsList = () => {
+const EmployerApplicantsList = ({ setView }) => {
       // Mock data for applicants
       const applicants = [
         { id: 1, name: "Elena Vázquez", skills: "React, CSS, HTML" },
         { id: 2, name: "David Peña", skills: "Node.js, Express, MongoDB" },
         { id: 3, name: "Laura Campos", skills: "Angular, TypeScript, RxJS" },
       ];
+
+      const handleAccept = () => {
+        setView("payment");
+      };
 
       return (
         <div>
@@ -16,8 +20,15 @@ const EmployerApplicantsList = () => {
                   <h3 className="font-bold">{applicant.name}</h3>
                   <p className="text-gray-600">{applicant.skills}</p>
                   <div className="mt-2">
-                    <button className="bg-green-500 text-white px-3 py-1 rounded mr-2">Aceptar</button>
-                    <button className="bg-red-500 text-white px-3 py-1 rounded">Rechazar</button>
+                    <button
+                      onClick={handleAccept}
+                      className="bg-green-500 hover:bg-green-600 text-white px-3 py-1 rounded mr-2"
+                    >
+                      Aceptar
+                    </button>
+                    <button className="bg-red-500 hover:bg-red-600 text-white px-3 py-1 rounded">
+                      Rechazar
+                    </button>
                   </div>
                 </li>
               ))}

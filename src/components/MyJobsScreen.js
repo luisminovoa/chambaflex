@@ -1,4 +1,4 @@
-const MyJobsScreen = () => {
+const MyJobsScreen = ({ setView }) => {
       // Mock data for jobs posted by the employer
       const myJobs = [
         { id: 1, title: "Desarrollador Frontend", applicants: 5 },
@@ -14,7 +14,7 @@ const MyJobsScreen = () => {
                 <li key={job.id} className="flex justify-between items-center py-2 border-b">
                   <span>{job.title}</span>
                   <button
-                    onClick={() => alert(`Ver ${job.applicants} aplicantes`)}
+                    onClick={() => setView("applicants")}
                     className="text-blue-500 hover:underline"
                   >
                     Ver Aplicantes ({job.applicants})

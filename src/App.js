@@ -33,11 +33,17 @@ const App = () => {
           case "my-applications":
             return <MyApplicationsScreen />;
           case "my-jobs":
-            return <MyJobsScreen />;
+            return <MyJobsScreen setView={setView} />;
           case "find-workers":
             return <FindWorkersScreen />;
           case "post-job":
             return <PostJobScreen />;
+          case "applicants":
+            return <EmployerApplicantsList setView={setView} />;
+          case "payment":
+            return <PaymentScreen setView={setView} />;
+          case "mission":
+            return <ContactSlide />;
           default:
             return <AuthScreen onLogin={handleLogin} />;
         }
