@@ -27,13 +27,15 @@ const App = () => {
           case "worker-dashboard":
             return <WorkerJobList />;
           case "employer-dashboard":
-            return <EmployerDashboard />;
+            return <EmployerDashboard setView={setView} />;
           case "profile":
             return <ProfileSetupScreen userType={user.type} />;
           case "my-applications":
             return <MyApplicationsScreen />;
           case "my-jobs":
             return <MyJobsScreen />;
+          case "find-workers":
+            return <FindWorkersScreen />;
           default:
             return <AuthScreen onLogin={handleLogin} />;
         }
