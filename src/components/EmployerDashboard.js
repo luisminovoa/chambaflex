@@ -11,7 +11,7 @@ const EmployerDashboard = () => {
                 Buscar Trabajadores
               </button>
               <button
-                onClick={() => alert("Redirigir a formulario de nuevo trabajo")}
+                onClick={() => setView("post-job")}
                 className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
               >
                 Publicar Nuevo Trabajo

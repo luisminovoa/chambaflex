@@ -36,6 +36,8 @@ const App = () => {
             return <MyJobsScreen />;
           case "find-workers":
             return <FindWorkersScreen />;
+          case "post-job":
+            return <PostJobScreen />;
           default:
             return <AuthScreen onLogin={handleLogin} />;
         }
