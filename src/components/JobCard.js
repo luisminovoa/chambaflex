@@ -1,3 +1,5 @@
+import React from 'react';
+
 const JobCard = ({ job }) => {
     return (
       <div className="bg-white p-6 rounded-2xl shadow-lg hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300 flex flex-col border-2 border-transparent hover:border-secondary">
@@ -24,3 +26,5 @@ const JobCard = ({ job }) => {
       </div>
     );
   };
+
+export default JobCard;

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 const EmployerJobForm = () => {
       const [title, setTitle] = useState("");
       const [company, setCompany] = useState("");
@@ -79,3 +81,5 @@ const EmployerJobForm = () => {
         </div>
       );
     };
+
+export default EmployerJobForm;

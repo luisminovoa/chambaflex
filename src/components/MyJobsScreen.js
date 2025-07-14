@@ -1,10 +1,7 @@
-const MyJobsScreen = ({ setView }) => {
-      // Mock data for jobs posted by the employer
-      const myJobs = [
-        { id: 1, title: "Desarrollador Frontend", applicants: 5 },
-        { id: 2, title: "Diseñador UX/UI", applicants: 3 },
-      ];
+import React from 'react';
+import { myJobs } from '../mock/data';
 
+const MyJobsScreen = ({ setView }) => {
       return (
         <div className="max-w-4xl mx-auto mt-10">
           <h2 className="text-2xl font-bold mb-6 text-primary">Mis Trabajos Publicados</h2>
@@ -26,3 +23,5 @@ const MyJobsScreen = ({ setView }) => {
         </div>
       );
     };
+
+export default MyJobsScreen;

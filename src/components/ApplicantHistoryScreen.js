@@ -1,3 +1,6 @@
+import React from 'react';
+import { jobHistory } from '../mock/data';
+
 const ApplicantHistoryScreen = () => {
       const renderStars = (rating) => {
         const stars = [];
@@ -12,14 +15,14 @@ const ApplicantHistoryScreen = () => {
       };
 
       return (
-        <div className="mt-6">
-          <h2 className="text-2xl font-bold mb-4">Historial y Reseñas</h2>
-          <div className="space-y-4">
+        <div className="max-w-4xl mx-auto mt-10">
+          <h2 className="text-2xl font-bold mb-6 text-primary">Historial y Reseñas</h2>
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
             {jobHistory.map((job) => (
-              <div key={job.id} className="bg-white p-4 rounded-lg shadow-md">
+              <div key={job.id} className="py-4 border-b last:border-b-0">
                 <div className="flex justify-between items-start">
                   <div>
-                    <h3 className="font-bold text-lg">{job.jobTitle}</h3>
+                    <h3 className="font-bold text-lg text-gray-800">{job.jobTitle}</h3>
                     <p className="text-gray-600">para {job.company}</p>
                   </div>
                   <span
@@ -45,3 +48,5 @@ const ApplicantHistoryScreen = () => {
         </div>
       );
     };
+
+export default ApplicantHistoryScreen;

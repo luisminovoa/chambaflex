@@ -1,3 +1,8 @@
+import React, { useState } from 'react';
+import JobSearchForm from './JobSearchForm';
+import JobCard from './JobCard';
+import { peruvianJobs } from '../mock/data';
+
 const WorkerJobList = () => {
       const [filteredJobs, setFilteredJobs] = useState(peruvianJobs);
 
@@ -34,7 +39,7 @@ const WorkerJobList = () => {
         <div className="p-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-6 text-center text-primary">Encuentra tu Próximo Trabajo</h2>
           <JobSearchForm onSearch={handleSearch} />
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
             {filteredJobs.length > 0 ? (
               filteredJobs.map((job) => <JobCard key={job.id} job={job} />)
             ) : (
@@ -44,3 +49,5 @@ const WorkerJobList = () => {
         </div>
       );
     };
+
+export default WorkerJobList;

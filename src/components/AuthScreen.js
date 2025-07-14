@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 const AuthScreen = ({ onLogin }) => {
       const [email, setEmail] = useState("");
       const [password, setPassword] = useState("");
@@ -74,3 +76,5 @@ const AuthScreen = ({ onLogin }) => {
         </div>
       );
     };
+
+export default AuthScreen;

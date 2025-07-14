@@ -1,3 +1,6 @@
+import React, { useState } from 'react';
+import { workers } from '../mock/data';
+
 const FindWorkersScreen = ({ setView }) => {
       const [filteredWorkers, setFilteredWorkers] = useState(workers);
 
@@ -49,7 +52,7 @@ const FindWorkersScreen = ({ setView }) => {
       );
     };
 
-    const WorkerSearchForm = ({ onSearch }) => {
+export const WorkerSearchForm = ({ onSearch }) => {
       const [skills, setSkills] = useState("");
       const [availability, setAvailability] = useState("");
       const [location, setLocation] = useState("");
@@ -118,7 +121,7 @@ const FindWorkersScreen = ({ setView }) => {
       );
     };
 
-    const WorkerCard = ({ worker, setView }) => {
+export const WorkerCard = ({ worker, setView }) => {
         const getAvailabilityClass = (availability) => {
             if (availability === 'Inmediata') return 'bg-secondary text-primary';
             return 'bg-gray-200 text-gray-800';
@@ -184,3 +187,5 @@ const FindWorkersScreen = ({ setView }) => {
             </div>
         );
     };
+
+export default FindWorkersScreen;

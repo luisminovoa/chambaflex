@@ -1,3 +1,5 @@
+import React from 'react';
+
 const RoleSelectionScreen = ({ onSelectRole }) => {
       return (
         <div className="max-w-2xl mx-auto mt-10 md:mt-20 p-4 text-center">
@@ -21,9 +23,11 @@ const RoleSelectionScreen = ({ onSelectRole }) => {
               className="bg-white p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-secondary"
             >
               <h3 className="text-2xl font-bold text-primary mb-2">Soy Trabajador</h3>
-              <p className="text-gray-600">Busco oportunidades para aplicar mis habilidades.</p>
+              <p className="text-gray-800">Busco oportunidades para aplicar mis habilidades.</p>
             </div>
           </div>
         </div>
       );
     };
+
+export default RoleSelectionScreen;

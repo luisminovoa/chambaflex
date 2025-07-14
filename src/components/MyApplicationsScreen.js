@@ -1,13 +1,7 @@
-const MyApplicationsScreen = () => {
-      // Mock data for applications
-      const applications = [
-        { id: 1, jobTitle: "Desarrollador Frontend", company: "Tech Solutions", status: "En revisión" },
-        { id: 2, jobTitle: "Diseñador UX/UI", company: "Creative Minds", status: "Rechazado" },
-        { id: 3, jobTitle: "Desarrollador Backend", company: "Server Experts", status: "Aceptado" },
-        { id: 4, jobTitle: "Project Manager", company: "Innovate Inc.", status: "En revisión" },
-        { id: 5, jobTitle: "Data Scientist", company: "Data Driven Co.", status: "Aceptado" },
-      ];
+import React from 'react';
+import { applications } from '../mock/data';
 
+const MyApplicationsScreen = () => {
       const getStatusClass = (status) => {
         switch (status) {
           case "Aceptado":
@@ -38,3 +32,5 @@ const MyApplicationsScreen = () => {
         </div>
       );
     };
+
+export default MyApplicationsScreen;

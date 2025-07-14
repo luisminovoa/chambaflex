@@ -1,10 +1,10 @@
-const jobs = [
+export const jobs = [
     { id: 1, title: "Desarrollador Frontend", company: "Tech Solutions", location: "Remoto" },
     { id: 2, title: "Diseñador UX/UI", company: "Creative Minds", location: "Ciudad de México" },
     { id: 3, title: "Desarrollador Backend", company: "Server Experts", location: "Guadalajara" },
 ];
 
-const jobHistory = [
+export const jobHistory = [
     {
       id: 1,
       jobTitle: "Desarrollo de Landing Page",
@@ -39,18 +39,18 @@ const jobHistory = [
     },
 ];
 
-const reviews = [
+export const reviews = [
     { id: 1, author: "Carlos Ruiz", rating: 5, comment: "Excelente plataforma, muy fácil de usar." },
     { id: 2, author: "Ana Torres", rating: 4, comment: "Encontré trabajo en una semana, ¡genial!" },
 ];
 
-const companyReviews = [
+export const companyReviews = [
     { id: 1, author: "Juan Pérez", rating: 5, comment: "Un excelente lugar para trabajar, muy buen ambiente." },
     { id: 2, author: "María García", rating: 4, comment: "La empresa se preocupa por sus empleados." },
     { id: 3, author: "Luis Rodríguez", rating: 5, comment: "Proyectos interesantes y oportunidades de crecimiento." },
 ];
 
-const peruvianJobs = [
+export const peruvianJobs = [
     { id: 1, title: "Desarrollador Full-Stack", company: "Rimac Seguros", location: "Lima", date: "2023-10-26", employerRating: 4.8 },
     { id: 2, title: "Diseñador Gráfico", company: "BCP", location: "Arequipa", date: "2023-10-25", employerRating: 4.9 },
     { id: 3, title: "Analista de Datos", company: "Interbank", location: "Lima", date: "2023-10-24", employerRating: 4.7 },
@@ -64,7 +64,7 @@ const peruvianJobs = [
     { id: 11, title: "Diseñador UX/UI Senior", company: "Mercado Libre", location: "Cusco", date: "2023-09-15", employerRating: 5.0 },
 ];
 
-const workers = [
+export const workers = [
     {
       id: 1,
       name: "Ana García",
@@ -107,7 +107,7 @@ const workers = [
       bio: "Desarrollador Backend enfocado en la escalabilidad y el rendimiento.",
       photo: "https://randomuser.me/api/portraits/men/46.jpg",
       rating: 4.8,
-      dailyAvailability:.
+      dailyAvailability: "Disponible",
     },
     {
         id: 5,
@@ -120,4 +120,17 @@ const workers = [
         rating: 4.6,
         dailyAvailability: "Disponible de 8 a.m. a 1 p.m.",
     },
+];
+
+export const applications = [
+    { id: 1, jobTitle: "Desarrollador Frontend", company: "Tech Solutions", status: "En revisión" },
+    { id: 2, jobTitle: "Diseñador UX/UI", company: "Creative Minds", status: "Rechazado" },
+    { id: 3, jobTitle: "Desarrollador Backend", company: "Server Experts", status: "Aceptado" },
+    { id: 4, jobTitle: "Project Manager", company: "Innovate Inc.", status: "En revisión" },
+    { id: 5, jobTitle: "Data Scientist", company: "Data Driven Co.", status: "Aceptado" },
+];
+
+export const myJobs = [
+    { id: 1, title: "Desarrollador Frontend", applicants: 5 },
+    { id: 2, title: "Diseñador UX/UI", applicants: 3 },
 ];

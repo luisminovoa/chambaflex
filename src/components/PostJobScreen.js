@@ -1,3 +1,6 @@
+import React from 'react';
+import EmployerJobForm from './EmployerJobForm';
+
 const PostJobScreen = () => {
       return (
         <div>
@@ -5,3 +8,5 @@ const PostJobScreen = () => {
         </div>
       );
     };
+
+export default PostJobScreen;

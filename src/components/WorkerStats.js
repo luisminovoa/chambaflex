@@ -1,3 +1,6 @@
+import React from 'react';
+import { jobHistory } from '../mock/data';
+
 const WorkerStats = () => {
       const completedJobs = jobHistory.filter(job => job.status === "Completado" && job.rating);
       const successfulJobs = completedJobs.length;
@@ -25,25 +28,27 @@ const WorkerStats = () => {
       };
 
       return (
-        <div className="bg-white p-6 rounded-lg shadow-md mb-6 text-center">
-          <h3 className="text-xl font-bold mb-4">Mis Estadísticas</h3>
+        <div className="bg-white p-8 rounded-2xl shadow-lg mb-6 text-center">
+          <h3 className="text-xl font-bold mb-4 text-primary">Mis Estadísticas</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <div>
-              <p className="text-lg font-semibold">Puntuación General</p>
+              <p className="text-lg font-semibold text-gray-800">Puntuación General</p>
               <div className="flex justify-center items-center">
                 {renderStars(averageRating)}
                 <span className="ml-2 text-xl font-bold">{averageRating.toFixed(1)}</span>
               </div>
             </div>
             <div>
-              <p className="text-lg font-semibold">Trabajos Completados</p>
+              <p className="text-lg font-semibold text-gray-800">Trabajos Completados</p>
               <p className="text-2xl font-bold">{successfulJobs}</p>
             </div>
             <div>
-              <p className="text-lg font-semibold">Nivel de Confianza</p>
+              <p className="text-lg font-semibold text-gray-800">Nivel de Confianza</p>
               <p className={`text-lg font-bold px-3 py-1 rounded-full inline-block ${trustLevelClass}`}>{trustLevel}</p>
             </div>
           </div>
         </div>
       );
     };
+
+export default WorkerStats;

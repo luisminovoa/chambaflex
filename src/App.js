@@ -1,3 +1,18 @@
+import React, { useState } from 'react';
+import AuthScreen from './components/AuthScreen';
+import RoleSelectionScreen from './components/RoleSelectionScreen';
+import WorkerJobList from './components/WorkerJobList';
+import EmployerDashboard from './components/EmployerDashboard';
+import ProfileSetupScreen from './components/ProfileSetupScreen';
+import MyApplicationsScreen from './components/MyApplicationsScreen';
+import MyJobsScreen from './components/MyJobsScreen';
+import FindWorkersScreen from './components/FindWorkersScreen';
+import PostJobScreen from './components/PostJobScreen';
+import EmployerApplicantsList from './components/EmployerApplicantsList';
+import PaymentScreen from './components/PaymentScreen';
+import ContactSlide from './components/ContactSlide';
+import LayoutHeader from './components/LayoutHeader';
+
 const App = () => {
       const [user, setUser] = useState(null);
       const [view, setView] = useState("auth"); // "auth", "role-selection", "worker-dashboard", "employer-dashboard", "profile"
@@ -65,3 +80,5 @@ const App = () => {
         </div>
       );
     };
+
+export default App;

@@ -1,3 +1,5 @@
+import React, { useState } from 'react';
+
 const LayoutHeader = ({ user, onLogout, setView }) => {
       const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -108,3 +110,5 @@ const LayoutHeader = ({ user, onLogout, setView }) => {
         </header>
       );
     };
+
+export default LayoutHeader;
