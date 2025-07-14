@@ -8,13 +8,13 @@ const ContactSlide = () => {
           <div className="bg-white p-8 rounded-lg shadow-xl">
             <h3 className="text-2xl font-bold mb-4">Contacto</h3>
             <p className="text-lg">
-              <span className="font-bold">Nombre:</span> [Tu Nombre]
+              <span className="font-bold">CEO:</span> Luis Novoa
             </p>
             <p className="text-lg">
-              <span className="font-bold">Correo:</span> [tu.correo@ejemplo.com]
+              <span className="font-bold">Correo:</span> elemen01@hotmail.com
             </p>
             <p className="text-lg">
-              <span className="font-bold">Ciudad Objetivo:</span> Lima, Perú
+              <span className="font-bold">Celular:</span> +51 953 242 589
             </p>
           </div>
         </div>
