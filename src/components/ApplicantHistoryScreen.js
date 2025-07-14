@@ -1,3 +1,5 @@
+import { jobHistory } from '../mock/data.js';
+
 const ApplicantHistoryScreen = () => {
       const renderStars = (rating) => {
         const stars = [];

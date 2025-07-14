@@ -1,3 +1,5 @@
+import { companyReviews, reviews } from '../mock/data.js';
+
 const Reviews = ({ userType }) => {
       const isEmployer = userType === "employer";
       const reviewsData = isEmployer ? companyReviews : reviews;

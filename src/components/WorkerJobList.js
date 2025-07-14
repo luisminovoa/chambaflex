@@ -1,9 +1,7 @@
-const WorkerJobList = () => {
-      const [filteredJobs, setFilteredJobs] = useState([]);
+import { peruvianJobs } from '../mock/data.js';
 
-      useEffect(() => {
-        setFilteredJobs(peruvianJobs);
-      }, []);
+const WorkerJobList = () => {
+      const [filteredJobs, setFilteredJobs] = useState(peruvianJobs);
 
       const handleSearch = ({ searchTerm, location, dateRange }) => {
         let jobs = peruvianJobs;

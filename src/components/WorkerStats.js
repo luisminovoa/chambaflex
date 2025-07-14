@@ -1,3 +1,5 @@
+import { jobHistory } from '../mock/data.js';
+
 const WorkerStats = () => {
       const completedJobs = jobHistory.filter(job => job.status === "Completado" && job.rating);
       const successfulJobs = completedJobs.length;

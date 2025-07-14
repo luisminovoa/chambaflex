@@ -1,3 +1,5 @@
+import { workers } from '../mock/data.js';
+
 const FindWorkersScreen = () => {
       const [filteredWorkers, setFilteredWorkers] = useState(workers);
 
