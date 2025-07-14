@@ -40,7 +40,7 @@ const App = () => {
           case "my-jobs":
             return <MyJobsScreen setView={setView} />;
           case "find-workers":
-            return <FindWorkersScreen />;
+            return <FindWorkersScreen setView={setView} />;
           case "post-job":
             return <PostJobScreen />;
           case "applicants":

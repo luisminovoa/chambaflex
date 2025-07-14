@@ -13,15 +13,15 @@ const AuthScreen = ({ onLogin }) => {
             <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
               La app que transforma el trabajo informal en <span className="text-secondary">oportunidad digital</span>
             </h1>
-            <p className="text-md md:text-lg text-gray-600">
+            <p className="text-md md:text-lg text-gray-800">
               Conecta con empleadores y trabajadores calificados por día u hora, en tiempo real.
             </p>
-            <p className="text-md md:text-lg text-gray-600 mt-4">
+            <p className="text-md md:text-lg text-gray-800 mt-4">
               A diferencia de otras plataformas, aquí puedes contratar sin publicar, viendo directamente quién está disponible según tu barrio y necesidad.
             </p>
           </div>
           <div>
-            <form onSubmit={handleLogin} className="bg-light p-8 rounded-2xl shadow-xl">
+            <form onSubmit={handleLogin} className="bg-white p-8 rounded-2xl shadow-lg">
               <h2 className="text-2xl font-bold mb-6 text-center text-primary">Iniciar Sesión</h2>
               <div className="mb-4">
                 <label className="block text-primary text-sm font-bold mb-2" htmlFor="email">
@@ -54,7 +54,7 @@ const AuthScreen = ({ onLogin }) => {
             <div className="flex items-center justify-between mb-4">
               <button
                 type="submit"
-                className="w-full bg-secondary hover:bg-opacity-90 text-primary font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline"
+                className="w-full bg-primary hover:bg-blue-900 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:shadow-outline"
               >
                 Iniciar Sesión
               </button>

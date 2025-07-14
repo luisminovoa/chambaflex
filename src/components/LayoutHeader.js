@@ -7,7 +7,7 @@ const LayoutHeader = ({ user, onLogout, setView }) => {
 
       return (
         <header className="bg-primary text-white p-4 flex justify-between items-center shadow-lg relative">
-          <h1 className="text-2xl font-bold">Chamba Flex</h1>
+          <h1 className="text-2xl font-bold">Chamby</h1>
           <nav className="hidden md:flex items-center">
             <button onClick={() => setView("mission")} className="mr-6 font-semibold hover:text-secondary">
                 Nuestra Misión

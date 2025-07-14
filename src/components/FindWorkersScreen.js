@@ -1,4 +1,4 @@
-const FindWorkersScreen = () => {
+const FindWorkersScreen = ({ setView }) => {
       const [filteredWorkers, setFilteredWorkers] = useState(workers);
 
       const handleSearch = ({ skills, availability, location }) => {
@@ -30,14 +30,14 @@ const FindWorkersScreen = () => {
       return (
         <div className="p-4">
           <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center text-primary">Encuentra al Talento Ideal</h2>
-          <p className="text-center text-md md:text-lg text-gray-600 mb-6">
+          <p className="text-center text-md md:text-lg text-gray-800 mb-6">
             Con un solo clic, los empleadores pueden ver quién está disponible hoy mismo, por hora o por día.
           </p>
           <WorkerSearchForm onSearch={handleSearch} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredWorkers.length > 0 ? (
               filteredWorkers.map((worker) => (
-                <WorkerCard key={worker.id} worker={worker} />
+                <WorkerCard key={worker.id} worker={worker} setView={setView} />
               ))
             ) : (
               <p className="text-center col-span-full">
@@ -62,7 +62,7 @@ const FindWorkersScreen = () => {
       return (
         <form
           onSubmit={handleSubmit}
-          className="bg-light p-6 rounded-lg shadow-md mb-6 flex items-end space-x-4"
+          className="bg-white p-6 rounded-lg shadow-md mb-6 flex items-end space-x-4"
         >
           <div className="flex-grow">
             <label htmlFor="skills" className="block text-sm font-medium text-primary">
@@ -118,10 +118,10 @@ const FindWorkersScreen = () => {
       );
     };
 
-    const WorkerCard = ({ worker }) => {
+    const WorkerCard = ({ worker, setView }) => {
         const getAvailabilityClass = (availability) => {
             if (availability === 'Inmediata') return 'bg-secondary text-primary';
-            return 'bg-light text-gray-800';
+            return 'bg-gray-200 text-gray-800';
         };
 
         const renderStars = (rating) => {
@@ -152,7 +152,7 @@ const FindWorkersScreen = () => {
                     <svg className="w-4 h-4 mr-1 text-secondary" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
                     {worker.location}
                 </p>
-                <div className="bg-light p-2 rounded-lg mb-4">
+                <div className="bg-gray-200 p-2 rounded-lg mb-4">
                     <p className="font-semibold text-sm text-gray-700">
                         📅 Hoy: <span className="font-normal">{worker.dailyAvailability}</span>
                     </p>
@@ -161,17 +161,23 @@ const FindWorkersScreen = () => {
                     {worker.skills.slice(0, 3).map((skill) => (
                         <span
                             key={skill}
-                            className="inline-block bg-light rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
+                            className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
                         >
                             {skill}
                         </span>
                     ))}
                 </div>
                 <div className="flex space-x-2 mt-auto">
-                    <button className="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-2 px-4 rounded-lg">
+                    <button
+                        onClick={() => setView("profile")}
+                        className="w-full bg-primary hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg"
+                    >
                         Ver Perfil
                     </button>
-                    <button className="w-full bg-secondary hover:bg-opacity-90 text-primary font-bold py-2 px-4 rounded-lg">
+                    <button
+                        onClick={() => alert("Funcionalidad de contacto no implementada todavía.")}
+                        className="w-full bg-secondary hover:bg-opacity-90 text-primary font-bold py-2 px-4 rounded-lg"
+                    >
                         Contactar
                     </button>
                 </div>

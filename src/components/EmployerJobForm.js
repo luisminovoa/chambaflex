@@ -13,10 +13,10 @@ const EmployerJobForm = () => {
 
       return (
         <div className="max-w-2xl mx-auto mt-10">
-          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6">Publicar un Nuevo Trabajo</h2>
+          <form onSubmit={handleSubmit} className="bg-white p-8 rounded-2xl shadow-lg">
+            <h2 className="text-2xl font-bold mb-6 text-primary">Publicar un Nuevo Trabajo</h2>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="title">
+              <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="title">
                 Título del Trabajo
               </label>
               <input
@@ -24,12 +24,12 @@ const EmployerJobForm = () => {
                 id="title"
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="company">
+              <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="company">
                 Empresa
               </label>
               <input
@@ -37,12 +37,12 @@ const EmployerJobForm = () => {
                 id="company"
                 value={company}
                 onChange={(e) => setCompany(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary"
                 required
               />
             </div>
             <div className="mb-4">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="location">
+              <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="location">
                 Ubicación
               </label>
               <input
@@ -50,19 +50,19 @@ const EmployerJobForm = () => {
                 id="location"
                 value={location}
                 onChange={(e) => setLocation(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary"
                 required
               />
             </div>
             <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="description">
+              <label className="block text-gray-800 text-sm font-bold mb-2" htmlFor="description">
                 Descripción
               </label>
               <textarea
                 id="description"
                 value={description}
                 onChange={(e) => setDescription(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 mb-3 leading-tight focus:outline-none focus:shadow-outline"
+                className="shadow-sm appearance-none border rounded-lg w-full py-3 px-4 text-gray-700 mb-3 leading-tight focus:outline-none focus:ring-2 focus:ring-secondary"
                 rows="5"
                 required
               ></textarea>
@@ -70,7 +70,7 @@ const EmployerJobForm = () => {
             <div className="flex items-center justify-end">
               <button
                 type="submit"
-                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                className="bg-primary hover:bg-blue-900 text-white font-bold py-2 px-4 rounded-lg focus:outline-none focus:shadow-outline"
               >
                 Publicar Trabajo
               </button>

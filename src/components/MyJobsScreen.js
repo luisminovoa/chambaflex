@@ -6,16 +6,16 @@ const MyJobsScreen = ({ setView }) => {
       ];
 
       return (
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Mis Trabajos Publicados</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="max-w-4xl mx-auto mt-10">
+          <h2 className="text-2xl font-bold mb-6 text-primary">Mis Trabajos Publicados</h2>
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
             <ul>
               {myJobs.map((job) => (
-                <li key={job.id} className="flex justify-between items-center py-2 border-b">
-                  <span>{job.title}</span>
+                <li key={job.id} className="flex justify-between items-center py-4 border-b last:border-b-0">
+                  <p className="font-bold text-lg text-gray-800">{job.title}</p>
                   <button
                     onClick={() => setView("applicants")}
-                    className="text-blue-500 hover:underline"
+                    className="bg-secondary hover:bg-opacity-90 text-primary font-bold py-2 px-4 rounded-lg"
                   >
                     Ver Aplicantes ({job.applicants})
                   </button>

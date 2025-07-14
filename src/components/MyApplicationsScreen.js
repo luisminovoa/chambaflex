@@ -20,14 +20,17 @@ const MyApplicationsScreen = () => {
       };
 
       return (
-        <div>
-          <h2 className="text-2xl font-bold mb-4">Mis Postulaciones</h2>
-          <div className="bg-white p-4 rounded-lg shadow-md">
+        <div className="max-w-4xl mx-auto mt-10">
+          <h2 className="text-2xl font-bold mb-6 text-primary">Mis Postulaciones</h2>
+          <div className="bg-white p-8 rounded-2xl shadow-lg">
             <ul>
               {applications.map((app) => (
-                <li key={app.id} className="flex justify-between items-center py-2 border-b">
-                  <span>{app.jobTitle}</span>
-                  <span className={`font-bold ${getStatusClass(app.status)}`}>{app.status}</span>
+                <li key={app.id} className="flex justify-between items-center py-4 border-b last:border-b-0">
+                  <div>
+                    <p className="font-bold text-lg text-gray-800">{app.jobTitle}</p>
+                    <p className="text-gray-600">{app.company}</p>
+                  </div>
+                  <span className={`font-bold text-lg ${getStatusClass(app.status)}`}>{app.status}</span>
                 </li>
               ))}
             </ul>
