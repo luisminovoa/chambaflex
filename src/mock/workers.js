@@ -12,7 +12,7 @@ const workers = [
       id: 2,
       name: "Carlos Martinez",
       location: "Arequipa",
-      availability: "Medio Tiempo",
+      availability: "Inmediata",
       skills: ["Diseño Gráfico", "Illustrator", "Photoshop"],
       bio: "Diseñador creativo con pasión por las interfaces limpias y modernas.",
       photo: "https://randomuser.me/api/portraits/men/43.jpg",
