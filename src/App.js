@@ -9,13 +9,17 @@ const App = () => {
       };
 
       const handleRoleSelection = (role) => {
-        console.log(`handleRoleSelection called with role: ${role}. Current user:`, user);
+        console.log("--- handleRoleSelection ---");
+        console.log("Role:", role);
+        console.log("User before update:", user);
+        console.log("View before update:", view);
         const newUser = { ...user, type: role };
-        console.log("Setting new user:", newUser);
         setUser(newUser);
         const newView = role === "worker" ? "worker-dashboard" : "employer-dashboard";
-        console.log("Setting new view:", newView);
         setView(newView);
+        console.log("User after update:", newUser);
+        console.log("View after update:", newView);
+        console.log("--------------------------");
       };
 
       const handleLogout = () => {
