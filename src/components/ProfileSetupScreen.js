@@ -1,4 +1,4 @@
-const ProfileSetupScreen = ({ userType }) => {
+const ProfileSetupScreen = ({ userType, setView }) => {
       const isEmployer = userType === "employer";
       const [name, setName] = useState(isEmployer ? "Tech Innovations Inc." : "John Doe");
       const [bio, setBio] = useState(

@@ -29,7 +29,7 @@ const App = () => {
           case "employer-dashboard":
             return <EmployerDashboard setView={setView} />;
           case "profile":
-            return <ProfileSetupScreen userType={user.type} />;
+            return <ProfileSetupScreen userType={user.type} setView={setView} />;
           case "my-applications":
             return <MyApplicationsScreen />;
           case "my-jobs":
