@@ -116,15 +116,53 @@ const FindWorkersScreen = () => {
     };
 
     const WorkerCard = ({ worker }) => {
+      const getAvailabilityClass = (availability) => {
+        switch (availability) {
+          case "Inmediata":
+            return "bg-red-500 text-white";
+          case "Tiempo Completo":
+            return "bg-blue-500 text-white";
+          case "Medio Tiempo":
+            return "bg-yellow-500 text-black";
+          case "Por Proyecto":
+            return "bg-purple-500 text-white";
+          default:
+            return "bg-gray-500 text-white";
+        }
+      };
+
+      const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 1; i <= 5; i++) {
+          stars.push(
+            <span key={i} className={`text-xl ${i <= rating ? "text-yellow-400" : "text-gray-300"}`}>
+              &#9733;
+            </span>
+          );
+        }
+        return stars;
+      };
+
       return (
         <div className="bg-white p-6 rounded-lg shadow-md text-center">
           <img
             src={worker.photo}
             alt={worker.name}
-            className="w-24 h-24 rounded-full mx-auto mb-4"
+            className="w-24 h-24 rounded-full mx-auto mb-4 border-4 border-gray-200"
           />
           <h3 className="text-xl font-bold">{worker.name}</h3>
+          <div className="flex justify-center items-center my-2">
+            {renderStars(worker.rating)}
+            <span className="ml-2 font-bold text-gray-700">{worker.rating.toFixed(1)}</span>
+          </div>
           <p className="text-gray-600 mb-2">{worker.location}</p>
+          <span
+            className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4 ${getAvailabilityClass(
+              worker.availability
+            )}`}
+          >
+            {worker.availability}
+          </span>
           <p className="text-sm text-gray-500 mb-4">{worker.bio}</p>
           <div className="mb-4">
             {worker.skills.map((skill) => (

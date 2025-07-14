@@ -7,6 +7,7 @@ const workers = [
       skills: ["React", "Node.js", "MongoDB"],
       bio: "Desarrolladora Full-Stack con 3 años de experiencia en aplicaciones web.",
       photo: "https://randomuser.me/api/portraits/women/68.jpg",
+      rating: 4.9,
     },
     {
       id: 2,
@@ -16,6 +17,7 @@ const workers = [
       skills: ["Diseño Gráfico", "Illustrator", "Photoshop"],
       bio: "Diseñador creativo con pasión por las interfaces limpias y modernas.",
       photo: "https://randomuser.me/api/portraits/men/43.jpg",
+      rating: 4.7,
     },
     {
       id: 3,
@@ -25,6 +27,7 @@ const workers = [
       skills: ["Contabilidad", "QuickBooks", "Análisis Financiero"],
       bio: "Contadora pública con experiencia en startups y pymes.",
       photo: "https://randomuser.me/api/portraits/women/44.jpg",
+      rating: 5.0,
     },
     {
       id: 4,
@@ -34,6 +37,7 @@ const workers = [
       skills: ["Python", "Django", "PostgreSQL"],
       bio: "Desarrollador Backend enfocado en la escalabilidad y el rendimiento.",
       photo: "https://randomuser.me/api/portraits/men/46.jpg",
+      rating: 4.8,
     },
     {
         id: 5,
@@ -43,5 +47,6 @@ const workers = [
         skills: ["Marketing Digital", "SEO", "Google Ads"],
         bio: "Especialista en marketing con experiencia en campañas de alto impacto.",
         photo: "https://randomuser.me/api/portraits/women/50.jpg",
+        rating: 4.6,
     },
   ];
