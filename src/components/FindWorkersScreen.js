@@ -28,9 +28,9 @@ const FindWorkersScreen = () => {
       };
 
       return (
-        <div>
-          <h2 className="text-3xl font-bold mb-2 text-center">Encuentra al Talento Ideal</h2>
-          <p className="text-center text-gray-600 mb-6">
+        <div className="p-4">
+          <h2 className="text-2xl md:text-3xl font-bold mb-2 text-center text-primary">Encuentra al Talento Ideal</h2>
+          <p className="text-center text-md md:text-lg text-gray-600 mb-6">
             Con un solo clic, los empleadores pueden ver quién está disponible hoy mismo, por hora o por día.
           </p>
           <WorkerSearchForm onSearch={handleSearch} />

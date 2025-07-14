@@ -1,7 +1,7 @@
 const RoleSelectionScreen = ({ onSelectRole }) => {
       return (
-        <div className="max-w-2xl mx-auto mt-20 text-center">
-          <h2 className="text-3xl font-bold text-primary mb-8">¿Cómo quieres continuar?</h2>
+        <div className="max-w-2xl mx-auto mt-10 md:mt-20 p-4 text-center">
+          <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">¿Cómo quieres continuar?</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div
               onClick={() => onSelectRole("employer")}

@@ -8,15 +8,15 @@ const AuthScreen = ({ onLogin }) => {
       };
 
       return (
-        <div className="max-w-4xl mx-auto mt-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-          <div className="text-left p-4">
-            <h1 className="text-4xl font-bold text-primary mb-4 leading-tight">
+        <div className="max-w-4xl mx-auto mt-5 md:mt-10 p-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+          <div className="text-center md:text-left p-4">
+            <h1 className="text-3xl md:text-4xl font-bold text-primary mb-4 leading-tight">
               La app que transforma el trabajo informal en <span className="text-secondary">oportunidad digital</span>
             </h1>
-            <p className="text-lg text-gray-600">
+            <p className="text-md md:text-lg text-gray-600">
               Conecta con empleadores y trabajadores calificados por día u hora, en tiempo real.
             </p>
-            <p className="text-lg text-gray-600 mt-4">
+            <p className="text-md md:text-lg text-gray-600 mt-4">
               A diferencia de otras plataformas, aquí puedes contratar sin publicar, viendo directamente quién está disponible según tu barrio y necesidad.
             </p>
           </div>
