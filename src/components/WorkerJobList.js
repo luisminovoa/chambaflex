@@ -1,5 +1,9 @@
 const WorkerJobList = () => {
-      const [filteredJobs, setFilteredJobs] = useState(peruvianJobs);
+      const [filteredJobs, setFilteredJobs] = useState([]);
+
+      useEffect(() => {
+        setFilteredJobs(peruvianJobs);
+      }, []);
 
       const handleSearch = ({ searchTerm, location, dateRange }) => {
         let jobs = peruvianJobs;
