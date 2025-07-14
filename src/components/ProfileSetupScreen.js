@@ -1,6 +1,11 @@
 const ProfileSetupScreen = ({ userType }) => {
-      const [name, setName] = useState("John Doe");
-      const [bio, setBio] = useState("Desarrollador Full-Stack con 5 años de experiencia.");
+      const isEmployer = userType === "employer";
+      const [name, setName] = useState(isEmployer ? "Tech Innovations Inc." : "John Doe");
+      const [bio, setBio] = useState(
+        isEmployer
+          ? "Líderes en soluciones de software a medida."
+          : "Desarrollador Full-Stack con 5 años de experiencia."
+      );
       const [skills, setSkills] = useState("React, Node.js, Python");
 
       const handleSubmit = (e) => {
@@ -11,10 +16,12 @@ const ProfileSetupScreen = ({ userType }) => {
       return (
         <div className="max-w-2xl mx-auto mt-10">
           <form onSubmit={handleSubmit} className="bg-white p-8 rounded-lg shadow-md">
-            <h2 className="text-2xl font-bold mb-6">Configuración del Perfil</h2>
+            <h2 className="text-2xl font-bold mb-6">
+              {isEmployer ? "Perfil de la Empresa" : "Configuración del Perfil"}
+            </h2>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="name">
-                Nombre Completo
+                {isEmployer ? "Nombre de la Empresa" : "Nombre Completo"}
               </label>
               <input
                 type="text"
@@ -26,7 +33,7 @@ const ProfileSetupScreen = ({ userType }) => {
             </div>
             <div className="mb-4">
               <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="bio">
-                Biografía
+                {isEmployer ? "Descripción de la Empresa" : "Biografía"}
               </label>
               <textarea
                 id="bio"
@@ -36,18 +43,20 @@ const ProfileSetupScreen = ({ userType }) => {
                 rows="4"
               ></textarea>
             </div>
-            <div className="mb-6">
-              <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="skills">
-                Habilidades (separadas por comas)
-              </label>
-              <input
-                type="text"
-                id="skills"
-                value={skills}
-                onChange={(e) => setSkills(e.target.value)}
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
-              />
-            </div>
+            {!isEmployer && (
+              <div className="mb-6">
+                <label className="block text-gray-700 text-sm font-bold mb-2" htmlFor="skills">
+                  Habilidades (separadas por comas)
+                </label>
+                <input
+                  type="text"
+                  id="skills"
+                  value={skills}
+                  onChange={(e) => setSkills(e.target.value)}
+                  className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700"
+                />
+              </div>
+            )}
             <div className="flex items-center justify-end">
               <button
                 type="submit"
@@ -57,8 +66,8 @@ const ProfileSetupScreen = ({ userType }) => {
               </button>
             </div>
           </form>
-          {userType === 'worker' && <ApplicantHistoryScreen />}
-          <Reviews />
+          {userType === 'worker' ? <ApplicantHistoryScreen /> : <MyJobsScreen />}
+          <Reviews userType={userType} />
         </div>
       );
     };

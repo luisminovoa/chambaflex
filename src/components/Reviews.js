@@ -1,10 +1,6 @@
-const Reviews = () => {
-      // Mock data for reviews
-      const reviewsData = [
-        { id: 1, author: "Carlos Ruiz", rating: 5, comment: "Excelente plataforma, muy fácil de usar." },
-        { id: 2, author: "Ana Torres", rating: 4, comment: "Encontré trabajo en una semana, ¡genial!" },
-        { id: 3, author: "Pedro Ramirez", rating: 5, comment: "Muy profesional y dedicado." },
-      ];
+const Reviews = ({ userType }) => {
+      const isEmployer = userType === "employer";
+      const reviewsData = isEmployer ? companyReviews : reviews;
 
       const renderStars = (rating) => {
         const stars = [];
@@ -20,7 +16,9 @@ const Reviews = () => {
 
       return (
         <div className="mt-10">
-          <h2 className="text-2xl font-bold mb-4">Mis Reseñas</h2>
+          <h2 className="text-2xl font-bold mb-4">
+            {isEmployer ? "Reseñas de la Empresa" : "Mis Reseñas"}
+          </h2>
           <div className="space-y-4">
             {reviewsData.map((review) => (
               <div key={review.id} className="bg-white p-4 rounded-lg shadow-md">
