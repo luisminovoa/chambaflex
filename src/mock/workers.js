@@ -8,6 +8,7 @@ const workers = [
       bio: "Desarrolladora Full-Stack con 3 años de experiencia en aplicaciones web.",
       photo: "https://randomuser.me/api/portraits/women/68.jpg",
       rating: 4.9,
+      dailyAvailability: "Disponible a partir de mañana",
     },
     {
       id: 2,
@@ -18,6 +19,7 @@ const workers = [
       bio: "Diseñador creativo con pasión por las interfaces limpias y modernas.",
       photo: "https://randomuser.me/api/portraits/men/43.jpg",
       rating: 4.7,
+      dailyAvailability: "Disponible hasta las 7 p.m.",
     },
     {
       id: 3,
@@ -28,6 +30,7 @@ const workers = [
       bio: "Contadora pública con experiencia en startups y pymes.",
       photo: "https://randomuser.me/api/portraits/women/44.jpg",
       rating: 5.0,
+      dailyAvailability: "Consultar disponibilidad",
     },
     {
       id: 4,
@@ -38,15 +41,17 @@ const workers = [
       bio: "Desarrollador Backend enfocado en la escalabilidad y el rendimiento.",
       photo: "https://randomuser.me/api/portraits/men/46.jpg",
       rating: 4.8,
+      dailyAvailability: "Disponible",
     },
     {
         id: 5,
         name: "Sofia Castillo",
         location: "Cusco",
-        availability: "Tiempo Completo",
+        availability: "Inmediata",
         skills: ["Marketing Digital", "SEO", "Google Ads"],
         bio: "Especialista en marketing con experiencia en campañas de alto impacto.",
         photo: "https://randomuser.me/api/portraits/women/50.jpg",
         rating: 4.6,
+        dailyAvailability: "Disponible de 8 a.m. a 1 p.m.",
     },
   ];

@@ -29,7 +29,10 @@ const FindWorkersScreen = () => {
 
       return (
         <div>
-          <h2 className="text-3xl font-bold mb-6 text-center">Encuentra al Talento Ideal</h2>
+          <h2 className="text-3xl font-bold mb-2 text-center">Encuentra al Talento Ideal</h2>
+          <p className="text-center text-gray-600 mb-6">
+            Con un solo clic, los empleadores pueden ver quién está disponible hoy mismo, por hora o por día.
+          </p>
           <WorkerSearchForm onSearch={handleSearch} />
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredWorkers.length > 0 ? (
@@ -156,16 +159,13 @@ const FindWorkersScreen = () => {
             <span className="ml-2 font-bold text-gray-700">{worker.rating.toFixed(1)}</span>
           </div>
           <p className="text-gray-600 mb-2">{worker.location}</p>
-          <span
-            className={`inline-block px-3 py-1 text-xs font-semibold rounded-full mb-4 ${getAvailabilityClass(
-              worker.availability
-            )}`}
-          >
-            {worker.availability}
-          </span>
-          <p className="text-sm text-gray-500 mb-4">{worker.bio}</p>
+          <div className="bg-gray-100 p-2 rounded-lg mb-4">
+            <p className="font-bold text-sm text-gray-700">
+              📅 Hoy: <span className="font-normal">{worker.dailyAvailability}</span>
+            </p>
+          </div>
           <div className="mb-4">
-            {worker.skills.map((skill) => (
+            {worker.skills.slice(0, 3).map((skill) => (
               <span
                 key={skill}
                 className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2"
@@ -174,9 +174,14 @@ const FindWorkersScreen = () => {
               </span>
             ))}
           </div>
-          <button className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded">
-            Contactar
-          </button>
+          <div className="flex space-x-2 mt-auto">
+            <button className="w-full bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
+              Ver Perfil
+            </button>
+            <button className="w-full bg-gray-300 hover:bg-gray-400 text-black font-bold py-2 px-4 rounded">
+              Calificar
+            </button>
+          </div>
         </div>
       );
     };
