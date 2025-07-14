@@ -11,7 +11,10 @@ const RoleSelectionScreen = ({ onSelectRole }) => {
               <p className="text-gray-600">Quiero contratar talento para mis proyectos.</p>
             </div>
             <div
-              onClick={() => onSelectRole("worker")}
+              onClick={() => {
+                console.log("Worker role selected in RoleSelectionScreen");
+                onSelectRole("worker");
+              }}
               className="bg-light p-8 rounded-2xl shadow-lg hover:shadow-2xl transform hover:-translate-y-1 transition-all duration-300 cursor-pointer border-2 border-transparent hover:border-secondary"
             >
               <h3 className="text-2xl font-bold text-primary mb-2">Soy Trabajador</h3>
