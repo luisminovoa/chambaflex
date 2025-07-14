@@ -1,4 +1,4 @@
-const EmployerDashboard = () => {
+const EmployerDashboard = ({ setView }) => {
       return (
         <div>
           <div className="flex justify-between items-center mb-6">
