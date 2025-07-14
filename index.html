@@ -10,8 +10,29 @@
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:image" content="https://4tsix0yujj.ufs.sh/f/2vMRHqOYUHc0K5prXUEjR7oilQcqGuVyEA8Sm1pf4v95nLIB" />
 
-          <!-- TailwindCSS CDN -->
+          <!-- Google Fonts: Poppins -->
+          <link rel="preconnect" href="https://fonts.googleapis.com">
+          <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+          <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+          <!-- TailwindCSS CDN & Customization -->
           <script src="https://cdn.tailwindcss.com"></script>
+          <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                  colors: {
+                    primary: '#6C3EFF',
+                    secondary: '#AFFF3C',
+                    light: '#F9F9F9',
+                  },
+                  fontFamily: {
+                    sans: ['Poppins', 'sans-serif'],
+                  }
+                }
+              }
+            }
+          </script>
 
           <!-- React & Babel -->
           <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
@@ -22,7 +43,7 @@
           <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-app-compat.js"></script>
           <script src="https://www.gstatic.com/firebasejs/9.6.7/firebase-auth-compat.js"></script>
         </head>
-        <body>
+        <body class="bg-light font-sans">
           <div id="root"></div>
           <script type="text/babel" src="src/firebaseConfig.js"></script>
           <script type="text/babel" src="src/components/JobCard.js"></script>
