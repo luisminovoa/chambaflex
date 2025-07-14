@@ -40,7 +40,7 @@ const LayoutHeader = ({ user, onLogout, setView }) => {
             ) : (
               <button
                 onClick={() => setView("auth")}
-                className="bg-white text-primary font-bold py-2 px-4 rounded-lg hover:bg-gray-200"
+                className="bg-secondary text-primary font-bold py-2 px-4 rounded-lg hover:bg-opacity-90"
               >
                 Iniciar Sesión
               </button>
